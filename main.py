@@ -1,7 +1,5 @@
 import streamlit as st  # loaded by streamlit cloud
 
-import streamlit as st
-
 
 def local_css(file_name: str) -> None:
     with open(file_name) as f:
@@ -17,8 +15,8 @@ def icon(icon_name: str) -> None:
 
 
 local_css("style.css")
-# remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
-# icon("search")
+remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
+icon("search")
 
 selected = st.text_input("", "Search...")
 button_clicked = st.button("OK")
