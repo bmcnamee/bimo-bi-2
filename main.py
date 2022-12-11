@@ -25,14 +25,14 @@ st.markdown(f"# Executive Summary Dashboard")
 
 
 r1c1, r1c2, r1c3, r1c4 = st.columns(4)
-r1c1.metric(label="Overall Census (% of Beds Filled)", value="92.0")
-r1c2.metric(label="ER Waiting (Number of Patients)", value="8")
-r1c3.metric(label="Admitted Today (Number of Patients)", value="3")
-r1c4.metric(label="Discharged Today (Number of Patients)", value="3")
+r1c1.metric(label="Overall Census", value="92.0%", help="Percent of beds currently filled.")
+r1c2.metric(label="ER Waiting", value="8 patients", help="Number of patients currently waiting in the ER.")
+r1c3.metric(label="Admitted Today", value="3 patients", help="Number of patients admitted so far today.")
+r1c4.metric(label="Discharged Today", value="3 patients", help="Number of patients discharged so far today.")
 
 
 r2c1, r2c2, r2c3, r2c4 = st.columns(4)
-r2c1.metric(label="Overall Patient Satisfaction (%)", value="77.6", delta="1.2")
-r2c2.metric(label="Likelihood to Recommend (%)", value="77.6", delta="-0.6")
-r2c3.metric(label="Average Length of Stay (Days)", value="4.2", delta="1.2")
-r2c4.metric(label="30 Day Readmit Rate (%)", value="2.2", delta="1.0")
+r2c1.metric(label="Overall Patient Satisfaction", value="77.6%", delta="1.2")
+r2c2.metric(label="Likelihood to Recommend", value="77.6%", delta="-0.6")
+r2c3.metric(label="Average Length of Stay", value="4.2 days", delta="1.2")
+r2c4.metric(label="30 Day Readmit Rate", value="2.2%", delta="1.0")
