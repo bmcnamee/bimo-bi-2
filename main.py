@@ -32,7 +32,15 @@ r1c4.metric(label="Discharged Today", value="3 patients", help="Number of patien
 
 
 r2c1, r2c2, r2c3, r2c4 = st.columns(4)
-r2c1.metric(label="Overall Patient Satisfaction", value="77.6%", delta="1.2")
-r2c2.metric(label="Likelihood to Recommend", value="77.6%", delta="-0.6")
-r2c3.metric(label="Average Length of Stay", value="4.2 days", delta="1.2")
-r2c4.metric(label="30 Day Readmit Rate", value="2.2%", delta="1.0")
+r2c1.metric(label="Overall Patient Satisfaction", value="77.6%", delta="1.2 MoM"
+            , help="Current month to date overall patient satisfaction percent \
+                    and absolute difference from prior month.")
+r2c2.metric(label="Likelihood to Recommend", value="77.6%", delta="-0.6 MoM"
+            , help="Current month to date likelihood to recommend percent \
+                    and absolute difference from prior month.")
+r2c3.metric(label="Length of Stay", value="4.2 days", delta="1.2 MoM"
+            , help="Current month to date average length of patient stay in days \
+                      and absolute difference from prior month.")
+r2c4.metric(label="30 Day Re-admit Rate", value="2.2%", delta="1.0 MoM"
+            , help="Current month to date 30 day patient re-admittance rate \
+                      and absolute difference from prior month.")
