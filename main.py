@@ -28,7 +28,7 @@ local_css("style.css")
 # selected = st.text_input("", "Search...")
 # button_clicked = st.button("OK")
 
-st.markdown("# Executive Summary Dashboard")
+st.title("Executive Summary Dashboard")
 
 tabs_list = [
     "KPI Summary",
@@ -98,7 +98,7 @@ with t1:
     }
     df_ms.rename(columns=col_names, inplace=True)
 
-    st.markdown("### Metric Summary")
+    st.header("Metric Summary")
     st.dataframe(data=df_ms, use_container_width=True)
 
 with t2:
