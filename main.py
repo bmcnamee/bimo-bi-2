@@ -98,7 +98,7 @@ with t1:
     }
     df_ms.rename(columns=col_names, inplace=True)
 
-    st.header("Metric Summary")
+    st.subheader("Metric Summary")
     st.dataframe(data=df_ms, use_container_width=True)
 
 with t2:
