@@ -5,16 +5,21 @@ html, body, [class*="css"] {
     font-weight: 500;
 }
 
-/*center metric label*/
+/* metric label*/
 [data-testid="stMetricLabel"] > div:nth-child(1) {
     font-size: 16px;
     color: #667085;
     justify-content: center;
 }
 
-/*center metric value*/
+/* metric value*/
 [data-testid="stMetricValue"] > div:nth-child(1) {
     font-size: 36px;
     color: #42525E;
+    justify-content: center;
+}
+
+/* metric delta*/
+[data-testid="stMetricValue"] > div:nth-child(1) {
     justify-content: center;
 }
