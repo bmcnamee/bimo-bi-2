@@ -20,6 +20,6 @@ html, body, [class*="css"] {
 }
 
 /* metric delta*/
-[data-testid="stMetricValue"] > div:nth-child(1) {
+[data-testid="stMetricDelta"] > div:nth-child(1) {
     justify-content: center;
 }
