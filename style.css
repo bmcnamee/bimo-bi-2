@@ -35,9 +35,11 @@ div[data-testid="metric-container"] > div[data-testid="stMetricDelta"] > div {
 }
 
 /*hide dataframe row index*/
+/*
 .row_heading.level0 {
     display:none
 }
 .blank {
     display:none
 }
+*/

@@ -96,7 +96,7 @@ with t1:
         "ytd_target": "YTD Target",
         "ytd_pct_from_target": "YTD % from Target"
     }
-    df_ms.rename(columns=col_names)
+    df_ms.rename(columns=col_names, inplace=True)
     st.dataframe(data=df_ms)
 
 with t2:
