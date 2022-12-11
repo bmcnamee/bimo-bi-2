@@ -1,19 +1,20 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
 
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
     font-weight: 500;
-    color: #667085;
 }
 
 /*center metric label*/
 [data-testid="stMetricLabel"] > div:nth-child(1) {
+    font-size: 16px;
+    color: #667085;
     justify-content: center;
 }
 
 /*center metric value*/
 [data-testid="stMetricValue"] > div:nth-child(1) {
+    font-size: 36px;
+    color: #42525E;
     justify-content: center;
 }
