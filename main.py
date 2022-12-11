@@ -98,8 +98,8 @@ with t1:
     }
     df_ms.rename(columns=col_names, inplace=True)
 
-    st.markdown("## Metric Summary")
-    st.dataframe(data=df_ms, use_container_width=st.session_state.use_container_width)
+    st.markdown("### Metric Summary")
+    st.dataframe(data=df_ms, use_container_width=True)
 
 with t2:
     st.markdown(f"{tabs_list[1]}")
