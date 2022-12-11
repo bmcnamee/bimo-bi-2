@@ -7,3 +7,13 @@ html, body, [class*="css"] {
     font-weight: 500;
     color: #667085;
 }
+
+/*center metric label*/
+[data-testid="stMetricLabel"] > div:nth-child(1) {
+    justify-content: center;
+}
+
+/*center metric value*/
+[data-testid="stMetricValue"] > div:nth-child(1) {
+    justify-content: center;
+}
