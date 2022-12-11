@@ -19,7 +19,17 @@ html, body, [class*="css"] {
     justify-content: center;
 }
 
-/* metric delta*/
-[data-testid="stMetricDelta"] > div:nth-child(1) {
-    justify-content: center;
+/*center metric delta value*/
+div[data-testid="metric-container"] > div[data-testid="stMetricDelta"] > div {
+  justify-content: center;
+  /*color: #01cefc;*/
+}
+
+/*center metric delta svg*/
+[data-testid="stMetricDelta"] > svg {
+  position: absolute;
+  left: 30%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
