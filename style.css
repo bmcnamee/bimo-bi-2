@@ -33,3 +33,11 @@ div[data-testid="metric-container"] > div[data-testid="stMetricDelta"] > div {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
+/*hide dataframe row index*/
+.row_heading.level0 {
+    display:none
+}
+.blank {
+    display:none
+}

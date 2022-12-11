@@ -86,7 +86,18 @@ with t1:
     }
     measure_summary_data.append(measure_summary_row)
     df_ms = pd.DataFrame(measure_summary_data)
-    st.table(data=df_ms)
+    col_names = {
+        "type": "Type",
+        "measure": "Measure",
+        "mtd": "MTD",
+        "mtd_target": "MTD Target",
+        "mtd_pct_from_target": "MTD % from Target",
+        "ytd": "YTD",
+        "ytd_target": "YTD Target",
+        "ytd_pct_from_target": "YTD % from Target"
+    }
+    df_ms.rename(columns=col_names)
+    st.dataframe(data=df_ms)
 
 with t2:
     st.markdown(f"{tabs_list[1]}")
