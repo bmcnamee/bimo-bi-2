@@ -1,5 +1,11 @@
 import streamlit as st  # loaded by streamlit cloud
 
+st.set_page_config(
+    page_title="Executive Dashboard Summary",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
 
 def local_css(file_name: str) -> None:
     with open(file_name) as f:
