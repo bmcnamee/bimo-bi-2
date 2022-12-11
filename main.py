@@ -97,7 +97,9 @@ with t1:
         "ytd_pct_from_target": "YTD % from Target"
     }
     df_ms.rename(columns=col_names, inplace=True)
-    st.dataframe(data=df_ms)
+
+    st.markdown("## Metric Summary")
+    st.dataframe(data=df_ms, use_container_width=st.session_state.use_container_width)
 
 with t2:
     st.markdown(f"{tabs_list[1]}")
