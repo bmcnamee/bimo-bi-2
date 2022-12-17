@@ -1,10 +1,36 @@
 import streamlit as st  # loaded by streamlit cloud
-import pandas as pd # loaded by streamlit cloud
+import pandas as pd  # loaded by streamlit cloud
+import gspread
+from google.oauth2 import service_account  # module name is google-auth
+
 
 st.set_page_config(
     page_title="Executive Dashboard Summary",
     layout="wide",
     initial_sidebar_state="collapsed"
+)
+
+
+# credentials not saved to Github. Saved in settings in streamlit cloud.
+credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"],
+    scopes=["https://www.googleapis.com/auth/spreadsheets", ],
+)
+
+
+gc = gspread.authorize(credentials)
+sh_url = st.secrets["private_gsheets_url"]
+sh = gc.open_by_url(sh_url)
+ws_name = "Sheet1"
+ws = sh.worksheet(ws_name)
+df = pd.DataFrame(ws.get_all_records())
+
+
+hosp_names_list = sorted(df["hospital_name"].unique())
+hosp_names_selected = st.sidebar.multiselect(
+    "Select Hospitals",
+    hosp_names_list,
+    hosp_names_list
 )
 
 
